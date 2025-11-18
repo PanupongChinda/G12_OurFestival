@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="Homepage.html">🎃 Admin Panel</a>
             <div class="collapse navbar-collapse">

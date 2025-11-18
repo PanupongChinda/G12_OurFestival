@@ -1,74 +1,83 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register | Hall-o'-ween Party</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Hall-o'-ween Party</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="Homepage.html">🎃 Hall-o'-ween</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="Homepage.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="register.html">Register</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="Homepage.html">🎃 Hall-o'-ween</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="Homepage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Boothdirectorypage.html">Booths</a></li>
+          <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
 
-    <div class="container mt-5 pt-5 pb-5 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-        <div class="card custom-card p-4 p-md-5 shadow-lg" style="width: 100%; max-width: 500px;">
-            <h2 class="text-center text-warning mb-1">ลงทะเบียนร่วมงาน</h2>
-            <p class="text-center text-white-50 mb-4">กรอกข้อมูลเพื่อรับตั๋วผีสิง 👻</p>
-            
-            <form id="registerForm" action="process_register.php" method="POST">
-                <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="name" placeholder="ชื่อ-สกุล" required>
-                    <label for="name" class="text-dark">ชื่อ-สกุล</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
-                    <label for="email" class="text-dark">อีเมล</label>
-                </div>
-
-                <div class="form-floating mb-3">
-                    <input type="tel" class="form-control" id="phone" placeholder="เบอร์โทรศัพท์" pattern="[0-9]{10}">
-                    <label for="phone" class="text-dark">เบอร์โทรศัพท์</label>
-                </div>
-
-                <div class="form-floating mb-4">
-                    <select class="form-select" id="ticket" required>
-                        <option selected disabled value="">เลือกประเภทตั๋ว...</option>
-                        <option value="normal">General (ฟรี)</option>
-                        <option value="vip_conjuring">VIP The Conjuring</option>
-                        <option value="vip_witch">VIP Witchnesday</option>
-                    </select>
-                    <label for="ticket" class="text-dark">ประเภทตั๋ว</label>
-                </div>
-
-                <button type="submit" class="btn btn-halloween w-100 py-2 fs-5">ยืนยันการลงทะเบียน</button>
-            </form>
-
-            <div id="successMessage" class="alert alert-success mt-3 text-center fw-bold" style="display: none;">
-                ✅ ลงทะเบียนเรียบร้อย! กำลังพาคุณไปหน้าแรก...
-            </div>
-        </div>
+          <li class="nav-item ms-lg-2 border-start border-secondary d-none d-lg-block"></li>
+          <li class="nav-item"><a class="nav-link text-warning" href="view_registrations.php">View Users</a></li>
+          <li class="nav-item"><a class="nav-link text-warning" href="view_feedbacks.php">View Feedbacks</a></li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
-    <footer class="text-center text-white-50">
-        <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
-    </footer>
+  <div class="container mt-5 pt-5 pb-5 d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+    <div class="card custom-card p-4 p-md-5 shadow-lg" style="width: 100%; max-width: 500px;">
+      <h2 class="text-center text-warning mb-1">ลงทะเบียนร่วมงาน</h2>
+      <p class="text-center text-white-50 mb-4">กรอกข้อมูลเพื่อรับตั๋วผีสิง 👻</p>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+      <form id="registerForm" action="process_register.php" method="POST">
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="name" placeholder="ชื่อ-สกุล" required>
+          <label for="name" class="text-dark">ชื่อ-สกุล</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+          <label for="email" class="text-dark">อีเมล</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="tel" class="form-control" id="phone" placeholder="เบอร์โทรศัพท์" pattern="[0-9]{10}">
+          <label for="phone" class="text-dark">เบอร์โทรศัพท์</label>
+        </div>
+
+        <div class="form-floating mb-4">
+          <select class="form-select" id="ticket" required>
+            <option selected disabled value="">เลือกประเภทตั๋ว...</option>
+            <option value="normal">General (ฟรี)</option>
+            <option value="vip_conjuring">VIP The Conjuring</option>
+            <option value="vip_witch">VIP Witchnesday</option>
+          </select>
+          <label for="ticket" class="text-dark">ประเภทตั๋ว</label>
+        </div>
+
+        <button type="submit" class="btn btn-halloween w-100 py-2 fs-5">ยืนยันการลงทะเบียน</button>
+      </form>
+
+      <div id="successMessage" class="alert alert-success mt-3 text-center fw-bold" style="display: none;">
+        ✅ ลงทะเบียนเรียบร้อย! กำลังพาคุณไปหน้าแรก...
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center text-white-50">
+    <p>&copy; 2025 Hall-o'-ween Party. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
+
 </html>
